@@ -13,14 +13,13 @@ function App() {
   });
   const [scrollWidth, setScrollWidth] = useState('0%');
 
-  // تشغيل وتحديث الأنيميشن عند فتح الموقع أو تغيير اللغة
   useEffect(() => {
     AOS.init({ 
       duration: 1000, 
       once: true, 
       easing: 'ease-out-cubic' 
     });
-    AOS.refresh(); // إجبار الـ React على تفعيل الأنيميشن فوراً
+    AOS.refresh();
     
     const handleScroll = () => {
       const winPos = document.documentElement.scrollTop;
@@ -32,7 +31,6 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // تحديث الـ AOS لما اللغة تتغير عشان العناصر تترسم صح
   useEffect(() => {
     setTimeout(() => {
       AOS.refresh();
@@ -98,7 +96,6 @@ function App() {
             <a href="#_amr_fullstack">{t[lang].projects}</a>
           </nav>
           <div className="_amr_sys_controls">
-            {/* زر الدارك واللايت مود رجع مكانه هنا */}
             <button onClick={toggleTheme} className="_amr_ctrl_btn" title="Toggle Mode">
               <i className={`fa-solid ${isDark ? 'fa-sun' : 'fa-moon'}`}></i>
             </button>
@@ -195,14 +192,46 @@ function App() {
         </div>
       </section>
 
-      {/* 03 // PRODUCTION_FULL_STACK_APPS */}
+      {/* 03 // PRODUCTION_FULL_STACK_APPS (تحديث المشاريع) */}
       <section className="_amr_section_block" id="_amr_fullstack">
         <div className="_amr_bound_box">
           <div className="_amr_section_header_flex">
             <h2 className="_amr_section_head">{t[lang].fsTitle}</h2>
           </div>
           <div className="_amr_projects_matrix">
+
+            {/* 1. دليل أطباء ديروط (جديد) */}
             <div className="_othman_project_node" data-aos="fade-up">
+              <a href="https://dairut-doctors-directory.vercel.app/" target="_blank" rel="noreferrer" className="_amr_img_clickable_link">
+                <div className="_amr_node_img_container">
+                  <img src="dairut-doctors.png" alt="Dairut Doctors Directory" className="_amr_project_screen_img" />
+                </div>
+              </a>
+              <div className="_amr_node_badge_row">
+                <span className="_amr_badge_cyan">FULL-STACK SAAS</span>
+                <a href="https://dairut-doctors-directory.vercel.app/" target="_blank" rel="noreferrer" className="_amr_link_icon"><i className="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+              <h3>Dairut Doctors Directory</h3>
+              <p>{lang === 'en' ? 'Comprehensive medical directory SaaS featuring real-time Firebase syncing, clinics indexing, and medical tools.' : 'دليل طبي سحابي شامل لمركز ديروط يربط المرضى بالأطباء والمعامل والصيدليات مع مزامنة لحظية عبر Firebase.'}</p>
+            </div>
+
+            {/* 2. نور الإسلام (جديد) */}
+            <div className="_othman_project_node" data-aos="fade-up" data-aos-delay="100">
+              <a href="https://noor-alislam.vercel.app/" target="_blank" rel="noreferrer" className="_amr_img_clickable_link">
+                <div className="_amr_node_img_container">
+                  <img src="noor-alislam.png" alt="Noor Al-Islam" className="_amr_project_screen_img" />
+                </div>
+              </a>
+              <div className="_amr_node_badge_row">
+                <span className="_amr_badge_cyan">ISLAMIC ECOSYSTEM</span>
+                <a href="https://noor-alislam.vercel.app/" target="_blank" rel="noreferrer" className="_amr_link_icon"><i className="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+              <h3>Noor Al-Islam Platform</h3>
+              <p>{lang === 'en' ? 'Ad-free modern Islamic digital suite with Quran reader, Audio recitations, Prayer timings, and Azkar.' : 'منصة إسلامية رقمية غير ربحية شاملة للقرآن الكريم، المكتبة الصوتية، مواقيت الصلاة، والأذكار.'}</p>
+            </div>
+
+            {/* 3. Habit Flow */}
+            <div className="_othman_project_node" data-aos="fade-up" data-aos-delay="200">
               <a href="https://habit-flow-ivory.vercel.app/" target="_blank" rel="noreferrer" className="_amr_img_clickable_link">
                 <div className="_amr_node_img_container">
                   <img src="1.png" alt="Habit Flow" className="_amr_project_screen_img" />
@@ -215,7 +244,9 @@ function App() {
               <h3>Habit Flow</h3>
               <p>{lang === 'en' ? 'Premium productivity ecosystem engineered for seamless daily routines logging.' : 'تطبيق إنتاجية متميز تم تطويره لتتبع العادات والروتين اليومي بسلاسة تامة.'}</p>
             </div>
-            <div className="_othman_project_node" data-aos="fade-up" data-aos-delay="100">
+
+            {/* 4. DevFinder Pro */}
+            <div className="_othman_project_node" data-aos="fade-up" data-aos-delay="300">
               <a href="https://devfinder-pro-tan.vercel.app/" target="_blank" rel="noreferrer" className="_amr_img_clickable_link">
                 <div className="_amr_node_img_container">
                   <img src="2.png" alt="DevFinder Pro" className="_amr_project_screen_img" />
@@ -228,6 +259,7 @@ function App() {
               <h3>DevFinder Pro</h3>
               <p>{lang === 'en' ? 'Advanced developer profile discoverability platform featuring lightning-fast data filtering.' : 'منصة متقدمة للبحث عن المطورين واستعراض ملفاتهم، تتميز بخوارزميات تصفية بيانات سريعة للغاية.'}</p>
             </div>
+
           </div>
         </div>
       </section>
