@@ -26,7 +26,7 @@ function App() {
   const canvasRef = useRef(null);
   const heroCardRef = useRef(null);
 
-  // Apply Theme & Direction
+  // Apply Theme & Direction to HTML Body
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
@@ -122,7 +122,7 @@ function App() {
     }
   }, []);
 
-  // Scroll Handler
+  // Scroll Progress Handler
   useEffect(() => {
     const handleScroll = () => {
       const total = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -393,7 +393,7 @@ function App() {
       role: lang === 'en' ? "Managing Partner — Law Firm" : "المستشار القانوني ومؤسس المنصة",
       quote: lang === 'en' 
         ? "Eng. Amr delivered an outstanding legal management platform. The session tracking and client indexing saved us countless administrative hours."
-        : "مهندس عمرو بنى لنا منصة قانونية متكاملة وإدارتها غاية في السرعة والسهولة، وفّرت علينا مجهود ضخم في متابعة الجلسات وأرشفة القضايا.",
+        : "مهندس عمرو بنى لنا منصة قانونية متكاملة وإدارتها غاية في السرعة والسهولة، وفّرت علينا مجهوداً ضخماً في متابعة الجلسات وأرشفة القضايا.",
       stars: 5
     },
     {
