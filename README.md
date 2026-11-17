@@ -1,16 +1,26 @@
-# React + Vite
+# Engineering Portfolio — Amr Othman
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Personal software engineering portfolio showcasing production web systems, full-stack SaaS architectures, and an interactive REST API & RBAC sandbox.
 
-Currently, two official plugins are available:
+**Live Production:** [amr-othman-portfolio.vercel.app](https://amr-othman-portfolio.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Architectural Highlights
 
-## React Compiler
+* **Asymmetric Bento Grid Layout:** Responsive structural hierarchy built with pure CSS Grid and fluid `clamp()` typography across mobile, tablet, and desktop viewports.
+* **Interactive API & Security Sandbox:** Live simulation of production REST endpoints (`POST`, `GET`, `PATCH`), request headers, JWT authorization payloads, and latency metrics.
+* **System Architecture Case Studies:** Modal inspection drawers detailing operational challenges, database schemas, and engineering trade-offs per project.
+* **Bilingual & Dual-Theme Engine:** Full `LTR / RTL` (English / Arabic) layout mirroring and persistent `Dark / Light` theme state via `localStorage`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the Oxlint configuration
+* **Core:** React 18, Vite, JavaScript (ES6+)
+* **Styling:** Custom CSS Variables, CSS Grid / Flexbox, JetBrains Mono & Inter Typography
+* **Form & Deployment:** Formspree API, Vercel Edge Network
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Local Setup
+
+```bash
+git clone [https://github.com/0xAmr5/My-Elite-Portfolio.git](https://github.com/0xAmr5/My-Elite-Portfolio.git)
+cd My-Elite-Portfolio
+npm install
+npm run dev
