@@ -477,7 +477,7 @@ function App() {
             <a href="#stack" onClick={() => setMenuOpen(false)}>{t.navStack}</a>
             <a href="#background" onClick={() => setMenuOpen(false)}>{t.navEdu}</a>
             <a href="#contact" onClick={() => setMenuOpen(false)}>{t.navContact}</a>
-            <a href="/Cv.pdf" target="_blank" rel="noreferrer" className="mobile-cv">
+            <a href="/cv.pdf" target="_blank" rel="noreferrer" className="mobile-cv">
               {t.btnCv}
             </a>
           </div>
@@ -504,7 +504,7 @@ function App() {
                 <a href="#work" className="btn-primary">
                   {t.btnWork}
                 </a>
-                <a href="/Cv.pdf" target="_blank" rel="noreferrer" className="btn-secondary">
+                <a href="/cv.pdf" target="_blank" rel="noreferrer" className="btn-secondary">
                   <i className="fa-solid fa-arrow-down" /> {t.btnCv}
                 </a>
               </div>
