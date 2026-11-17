@@ -848,7 +848,7 @@ Database: MongoDB Atlas Connected`}</pre>
           <div className="footer-nav">
             <a href="https://github.com/0xAmr5" target="_blank" rel="noreferrer">GitHub</a>
             <a href="https://linkedin.com/in/x-amr-othman-x1" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="/Cv.pdf" target="_blank" rel="noreferrer">Resume</a>
+            <a href="/cv.pdf" target="_blank" rel="noreferrer">Resume</a>
           </div>
         </div>
       </footer>
